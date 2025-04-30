@@ -18,7 +18,6 @@ import makeo.gadomancy.common.blocks.BlockEssentiaCompressor;
 import makeo.gadomancy.common.blocks.BlockExtendedNodeJar;
 import makeo.gadomancy.common.blocks.BlockInfusionClaw;
 import makeo.gadomancy.common.blocks.BlockKnowledgeBook;
-import makeo.gadomancy.common.blocks.BlockNode;
 import makeo.gadomancy.common.blocks.BlockNodeManipulator;
 import makeo.gadomancy.common.blocks.BlockRemoteJar;
 import makeo.gadomancy.common.blocks.BlockStickyJar;
@@ -39,7 +38,6 @@ import makeo.gadomancy.common.blocks.tiles.TileManipulatorPillar;
 import makeo.gadomancy.common.blocks.tiles.TileNodeManipulator;
 import makeo.gadomancy.common.blocks.tiles.TileRemoteJar;
 import makeo.gadomancy.common.blocks.tiles.TileStickyJar;
-import makeo.gadomancy.common.data.config.ModConfig;
 import makeo.gadomancy.common.items.ItemBlockAdditionalEldritchPortal;
 import makeo.gadomancy.common.items.ItemBlockAuraPylon;
 import makeo.gadomancy.common.items.ItemBlockEssentiaCompressor;
@@ -69,7 +67,7 @@ public class RegisteredBlocks {
     public static BlockArcaneDropper blockArcaneDropper;
     public static BlockInfusionClaw blockInfusionClaw;
     public static BlockRemoteJar blockRemoteJar;
-    public static BlockAiry blockNode = (BlockAiry) ConfigBlocks.blockAiry;
+    public static BlockAiry blockNode;
     public static BlockExtendedNodeJar blockExtendedNodeJar;
     public static BlockNodeManipulator blockNodeManipulator;
     public static BlockStoneMachine blockStoneMachine;
@@ -94,9 +92,7 @@ public class RegisteredBlocks {
         RegisteredBlocks.blockInfusionClaw = RegisteredBlocks.registerBlock(new BlockInfusionClaw());
         RegisteredBlocks.blockRemoteJar = RegisteredBlocks
                 .registerBlock(new BlockRemoteJar(), ItemBlockRemoteJar.class);
-        RegisteredBlocks.blockNode = ModConfig.enableAdditionalNodeTypes
-                ? (BlockAiry) new BlockNode().setBlockName("blockAiry")
-                : (BlockAiry) ConfigBlocks.blockAiry;
+        RegisteredBlocks.blockNode = (BlockAiry) ConfigBlocks.blockAiry;
         RegisteredBlocks.blockExtendedNodeJar = RegisteredBlocks.registerBlock(new BlockExtendedNodeJar());
         RegisteredBlocks.blockNodeManipulator = RegisteredBlocks
                 .registerBlock(new BlockNodeManipulator(), ItemNodeManipulator.class);
