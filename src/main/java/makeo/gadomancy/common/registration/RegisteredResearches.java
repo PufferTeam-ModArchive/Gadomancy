@@ -113,11 +113,12 @@ public class RegisteredResearches {
 
         RegisteredResearches.researchGolemRunicShield = new SimpleResearchItem(
                 "GOLEMRUNICSHIELD",
-                0,
-                0,
+                8,
+                5,
                 4,
                 new ItemStack(RegisteredItems.itemFakeGolemShield, 1, 32767),
-                new AspectList().add(Aspect.AURA, 16).add(Aspect.ARMOR, 6).add(Aspect.MAGIC, 4).add(Aspect.MOTION, 8))
+                new AspectList().add(Aspect.AURA, 16).add(Aspect.ARMOR, 6).add(Aspect.MAGIC, 4).add(Aspect.MOTION, 8),
+                "GOLEMANCY")
                         .setParents(RegisteredResearches.researchGolemSilverwood.key).setConcealed()
                         .setPages(
                                 new ResearchPage("gadomancy.research_page.GOLEMRUNICSHIELD.1"),

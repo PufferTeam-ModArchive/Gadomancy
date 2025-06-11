@@ -25,6 +25,16 @@ public class SimpleResearchItem extends ResearchItem {
         super(SimpleResearchItem.PREFIX + key, Gadomancy.MODID, tags, col, row, complex, icon);
     }
 
+    public SimpleResearchItem(String key, int col, int row, int complex, ResourceLocation icon, AspectList tags,
+            String category) {
+        super(SimpleResearchItem.PREFIX + key, category, tags, col, row, complex, icon);
+    }
+
+    public SimpleResearchItem(String key, int col, int row, int complex, ItemStack icon, AspectList tags,
+            String category) {
+        super(SimpleResearchItem.PREFIX + key, category, tags, col, row, complex, icon);
+    }
+
     public static String getFullName(String name) {
         return SimpleResearchItem.PREFIX + name;
     }
